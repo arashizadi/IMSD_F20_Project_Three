@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//A.I.
 public class MouseLook : MonoBehaviour
 {
     public float mouseSensitivity = 100f;
