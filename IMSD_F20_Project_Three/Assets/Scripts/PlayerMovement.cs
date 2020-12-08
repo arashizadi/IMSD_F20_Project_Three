@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//A.i.
+//A.I.
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
