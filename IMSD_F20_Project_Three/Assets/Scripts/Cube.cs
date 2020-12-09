@@ -18,7 +18,8 @@ public class Cube : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        GameManager.stress -= 5;
+        GameManager.stress -= 2;
         gameObject.SetActive(false);
     }
+
 }
