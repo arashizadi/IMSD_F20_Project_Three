@@ -8,11 +8,12 @@ public class GameManager : MonoBehaviour
 {
     //public List<List<string>> inventory = new List<List<string>>();
     public TextMeshPro greenBar, yellowBar, redBar;
-    public int stress;
+    public static int stress;
     // Start is called before the first frame update
     void Start()
     {
         stress = 15;
+        PickObject();
     }
 
     // Update is called once per frame
@@ -22,6 +23,11 @@ public class GameManager : MonoBehaviour
 
     }
 
+    void PickObject()
+    {
+        //inventory.Add(new List<string>());
+
+    }
     void StressVisual()
     {
         if (stress == 15)
