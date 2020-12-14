@@ -6751,7 +6751,7 @@ MonoBehaviour:
   redBar: {fileID: 1100470972}
   time: {fileID: 818008921}
   introInfo: {fileID: 480687538}
-  cooldown: 7
+  cooldown: 5.69
   stressMaterial: {fileID: 1807204739}
   stressRenderer1: {fileID: 1061715367}
   stressRenderer2: {fileID: 909914768}

@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     //public List<List<string>> inventory = new List<List<string>>();
     public TextMesh greenBar, yellowBar, redBar, time, introInfo;
     public static int stress;
-    public int cooldown;
+    public float cooldown;
     public GameObject stressMaterial;
     public Renderer stressRenderer1, stressRenderer2, stressRenderer3;
     byte transColor = 0;

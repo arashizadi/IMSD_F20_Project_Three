@@ -1294,6 +1294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2027262995}
   - component: {fileID: 2027262994}
+  - component: {fileID: 2027262996}
   m_Layer: 0
   m_Name: Dialogue
   m_TagString: Untagged
@@ -1366,6 +1367,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2027262996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027262993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2ce01a5322d7274a85e1b183f80a406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goodEndingBossOne: GBoss1
+  goodEndingPlayerOne: GPlayer1
+  goodEndingBossTwo: GBoss2
+  goodEndingPlayerTwo: GPlayer2
+  goodEndingBossThree: GBoss3
+  goodEndingPlayerThree: GPlayer3
+  goodEndingBossFour: GBoss4
+  goodEndingPlayerFour: GPlayer4
+  badEndingBossOne: BBoss1
+  badEndingPlayerOne: GPlayer1
+  badEndingBossTwo: BBoss2
+  badEndingPlayerTwo: GPlayer2
+  badEndingBossThree: BBoss3
+  badEndingPlayerThree: GPlayer3
+  badEndingBossFour: BBoss4
+  badEndingPlayerFour: GPlayer4
 --- !u!1 &2125734313
 GameObject:
   m_ObjectHideFlags: 0
