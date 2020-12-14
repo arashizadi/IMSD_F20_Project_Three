@@ -1,19 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 //A.I.
 
 public class GameManager : MonoBehaviour
 {
     //public List<List<string>> inventory = new List<List<string>>();
-    public TextMesh greenBar, yellowBar, redBar;
+    public TextMesh greenBar, yellowBar, redBar, time, introInfo;
     public static int stress;
-    public int cooldown = 30;
+    public int cooldown;
     public GameObject stressMaterial;
     public Renderer stressRenderer1, stressRenderer2, stressRenderer3;
     byte transColor = 0;
     bool visibleStress;
-    float stressOvertimeTimer, stressColorOvertimeTimer;
+    float stressOvertimeTimer, stressColorOvertimeTimer, timer = 60;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,15 @@ public class GameManager : MonoBehaviour
     {
         StressVisual();
         StressOvertime();
+        timer -= Time.deltaTime;
+        time.text = "Interview in " + ((int)timer).ToString();
+        if (timer < 53)
+            introInfo.gameObject.SetActive(false);
+        if (timer <= 0)
+        {
+            SceneManager.LoadScene(2);
+        }
+
     }
 
     void StressOvertime()
@@ -39,7 +49,7 @@ public class GameManager : MonoBehaviour
             stress++;
             stressOvertimeTimer = 0;
         }
-        if (stress >= 11)
+        if (stress >= 13)
         {
             stressMaterial.SetActive(true);
             stressColorOvertimeTimer += Time.deltaTime;
@@ -72,8 +82,9 @@ public class GameManager : MonoBehaviour
     }
     void StressVisual()
     {
-        if (stress == 15)
+        if (stress >= 15)
         {
+            stress = 15;
             greenBar.text = "█████";
             yellowBar.text = "█████";
             redBar.text = "█████";
@@ -156,17 +167,13 @@ public class GameManager : MonoBehaviour
             yellowBar.text = "";
             redBar.text = "";
         }
-        else if (stress == 1)
+        else
         {
+            stress = 1;
             greenBar.text = "█";
             yellowBar.text = "";
             redBar.text = "";
         }
-        else
-        {
-            Debug.LogError("Unknown amount of stress");
-        }
-
     }
 
 
