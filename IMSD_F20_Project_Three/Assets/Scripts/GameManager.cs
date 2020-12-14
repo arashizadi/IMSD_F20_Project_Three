@@ -1,17 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 //A.I.
 
 public class GameManager : MonoBehaviour
 {
     //public List<List<string>> inventory = new List<List<string>>();
-    public TextMeshPro greenBar, yellowBar, redBar;
+    public TextMesh greenBar, yellowBar, redBar;
     public static int stress;
     public int cooldown = 30;
     public GameObject stressMaterial;
-    public Renderer stressRenderer;
+    public Renderer stressRenderer1, stressRenderer2, stressRenderer3;
     byte transColor = 0;
     bool visibleStress;
     float stressOvertimeTimer, stressColorOvertimeTimer;
@@ -19,8 +18,10 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        stressRenderer.material.color = new Color32(102, 00, 00, 100);
-        stress = 11;
+        stressRenderer1.material.color = new Color32(102, 00, 00, 100);
+        stressRenderer2.material.color = new Color32(102, 00, 00, 100);
+        stressRenderer3.material.color = new Color32(102, 00, 00, 100);
+        stress = 7;
     }
 
     // Update is called once per frame
@@ -60,7 +61,9 @@ public class GameManager : MonoBehaviour
                     stressColorOvertimeTimer = 0;
                 }
             }
-            stressRenderer.material.color = new Color32(102, 00, 00, transColor);
+            stressRenderer1.material.color = new Color32(102, 00, 00, transColor);
+            stressRenderer2.material.color = new Color32(102, 00, 00, transColor);
+            stressRenderer3.material.color = new Color32(102, 00, 00, transColor);
         }
         else
         {
